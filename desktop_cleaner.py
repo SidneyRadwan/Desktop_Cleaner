@@ -7,8 +7,6 @@ Sorts remaining files by filetype into folders e.g 'cat.jpeg' gets stored into '
 
 Incase filenames are already taken in the destination folder, will handle according to user preference e.g keep both, keep all, replace, replace all, skip and cancel
 
-Asks user for a keyword/s of filenames or types to sort their desktop by?
-
 Warning. Test this program works on files that are backed up first as it has the ability to overwrite files.
 
 By Sidney Radwan.
