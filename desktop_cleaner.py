@@ -1,7 +1,7 @@
 """Desktop Cleaner
 Simple version. Move this program to the directory that is to be sorted then run it.
 
-Sorts Mac OS screenshots of format e.g Screen Shot 2020-03-24 at 9.44.28 pm.png into a Screenshots Folder
+Sorts Mac OS screenshots of format e.g 'Screen Shot 2020-03-24 at 9.44.28 pm.png' into a 'Screenshots' Folder
 
 Sorts remaining files by filetype into folders e.g 'cat.jpeg' gets stored into 'jpeg Files' Folder
 
