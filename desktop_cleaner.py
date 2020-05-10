@@ -7,12 +7,14 @@ Sorts remaining files by filetype into folders e.g 'cat.jpeg' gets stored into '
 
 Incase filenames are already taken in the destination folder, will handle according to user preference e.g keep both, keep all, replace, replace all, skip and cancel
 
+Asks user for a keyword/s of filenames or types to sort their desktop by?
+
 Warning. Test this program works on files that are backed up first as it has the ability to overwrite files.
 
 By Sidney Radwan.
 """
 
-import shutil, os, re
+import shutil, os, re, sys
 
 def move_file(name_body,extension,temp_file_path, temp_dir_path,static_replace_all,static_keep_all):
 	filename = os.path.basename(temp_file_path)
@@ -24,7 +26,12 @@ def move_file(name_body,extension,temp_file_path, temp_dir_path,static_replace_a
 	#runs a check if it exists already!
 	if os.path.isfile(intended_file_path) == True and static_replace_all == False and static_keep_all == False:
 		while(True):
-			user_command = input("File '%s' already exists in intended directory '%s'. Type 'replace', 'replace all', 'keep both', 'keep all', 'skip' or 'cancel' to continue.\n" %(filename , temp_dir_path))				
+			#checks for python version as python3 renamed raw_input() to input()
+			if sys.version_info < (3,0,0):
+				user_command = raw_input("File '%s' already exists in intended directory '%s'. Type 'replace', 'replace all', 'keep both', 'keep all', 'skip' or 'cancel' to continue.\n" %(filename , temp_dir_path))				
+			elif sys.version_info >= (3,0,0):	
+				user_command = input("File '%s' already exists in intended directory '%s'. Type 'replace', 'replace all', 'keep both', 'keep all', 'skip' or 'cancel' to continue.\n" %(filename , temp_dir_path))				
+			
 			if user_command == 'replace' or user_command == 'replace all':
 				shutil.move(temp_file_path, intended_file_path)
 				if user_command == 'replace all':
@@ -67,6 +74,14 @@ def move_file(name_body,extension,temp_file_path, temp_dir_path,static_replace_a
 
 def main():
 	cwd_path = os.getcwd()
+
+	if getattr(sys, 'frozen', False):#checks if run as an executable, sets path correctly
+	    cwd_path = os.path.dirname(sys.executable)
+	    print(cwd_path)
+	elif __file__:
+		cwd_path = os.getcwd()
+		print(cwd_path)
+
 	directory_contents = os.listdir(cwd_path)
 
 	screenshots_regex = re.compile(r'(Screen Shot \d\d\d\d-\d\d-\d\d at (\d){1,2}\.\d\d\.\d\d (a|p)m)\.png')
