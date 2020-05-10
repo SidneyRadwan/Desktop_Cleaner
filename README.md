@@ -18,7 +18,7 @@ it was placed in, and allow the user to pre-specify keywords to sort by or direc
 dragged and dropped into any directory or folder and it will sort the files for you. 
 Fixed issues with python2 having raw_input() and python3 having input(), and exe having incorrect working directory.
 Included is an executable for the program which will work for Mac Os only. Other OS users will still have to manually
-run the programs script in their terminal/command prompt.
+run the program's script in their terminal/command prompt.
 
 Warning. Test this program works on files that are backed up first as it has the ability to overwrite files.
 
