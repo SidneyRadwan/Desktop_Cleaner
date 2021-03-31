@@ -1,4 +1,4 @@
-# Desktop Cleaner
+# Desktop Cleaner 🧹
 
 By Sidney Radwan
 
