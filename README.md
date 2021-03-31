@@ -2,12 +2,14 @@
 
 By Sidney Radwan
 
- - Finds and sorts Mac OS screenshots of format e.g 'Screen Shot 2020-03-24 at 9.44.28 pm.png' into a 'Screenshots' Folder
+ - Windows and MacOS compatible
+
+ - Finds and sorts Mac OS screenshots of format e.g 'Screen Shot 2020-03-24 at 9.44.28 pm.png' into a special 'Screenshots' Folder
 
  - Sorts remaining files by filetype into folders e.g 'cat.jpeg' gets stored into 'jpeg Files' Folder
 
- - Incase filenames are already taken in the destination folder, will handle according to user preference 
-provided in terminal e.g keep both, keep all, replace, replace all, skip and cancel
+ - Incase filenames are already taken in the destination folder, program will handle files according to user preference 
+provided in command shell i.e keep both, keep all, replace, replace all, skip and cancel
 
 ### Simple Method:
 Move this program to the directory that is to be sorted then run it with Python.
