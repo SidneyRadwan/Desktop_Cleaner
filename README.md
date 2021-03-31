@@ -4,7 +4,7 @@ By Sidney Radwan
 
  - Windows and MacOS compatible
 
- - Finds and sorts Mac OS screenshots of format e.g 'Screen Shot 2020-03-24 at 9.44.28 pm.png' into a special 'Screenshots' Folder
+ - Finds and sorts MacOS screenshots of format e.g 'Screen Shot 2020-03-24 at 9.44.28 pm.png' into a special 'Screenshots' Folder
 
  - Sorts remaining files by filetype into folders e.g 'cat.jpeg' gets stored into 'jpeg Files' Folder
 
